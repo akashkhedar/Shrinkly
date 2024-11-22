@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://localhost:27017/urlshortner";
+const mongoURI = process.env.MONGODB ?? "mongodb://localhost:27017/urlshortner";
 
 const connectToMongo = () => {
     mongoose.connect(mongoURI)
