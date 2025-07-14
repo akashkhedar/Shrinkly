@@ -1,10 +1,12 @@
-const mongoose = require('mongoose');
-const mongoURI = process.env.MOGNODB ?? "mongodb://localhost:27017/urlshortner";
+const mongoose = require("mongoose");
+const mongoURI =
+  "mongodb+srv://admin:admin@shrinkly.mazdvii.mongodb.net/?retryWrites=true&w=majority&appName=Shrinkly";
 
 const connectToMongo = () => {
-    mongoose.connect(mongoURI)
+  mongoose
+    .connect(mongoURI)
     .then((res) => console.log("connected successfully"))
-    .catch((err) => console.error(err))
-}
+    .catch((err) => console.error(err));
+};
 
 module.exports = connectToMongo;
